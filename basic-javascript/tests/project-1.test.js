@@ -1,5 +1,7 @@
 const assert = require('chai').assert;
 const funcs = require('../src/project-1');
+const expect = require('chai').expect;
+const cases = require('../src/app.js');
 
 // we've gone ahead and gotten a start here for you,
 // except, for some reason, none of our current assertions are working.
@@ -15,10 +17,10 @@ describe('Project-1 Functions', () => {
       assert.typeOf(multiplyByTen, 'function');
     });
     // begin here
-    // it('multiplyByTen(10) should be equal to 100', () => {
-    //   const multiplyByTen = cases.multiplyByTen;
-    //   const expectedMultiplyByTen = 
-    // })
+    it('multiplyByTen(10) should be equal to 100', () => {
+      const multiplyByTen = funcs.multiplyByTen;
+      assert.equal(multiplyByTen(10), 100);
+    });
   });
 
   describe('`subtractFive`', () => {
@@ -26,12 +28,20 @@ describe('Project-1 Functions', () => {
       const subtractFive = funcs.subtractFive;
       assert.typeOf(subtractFive, 'function');
     });
+    it('subtractFive(10) should be equal to 5', () => {
+      const subtractFive = funcs.subtractFive;
+      assert.equal(subtractFive(10), 5);
+    });
   });
 
   describe('`areSameLength`', () => {
     it('should be a function', () => {
       const areSameLength = funcs.areSameLength;
       assert.typeOf(areSameLength, 'function');
+    });
+    it('areSameLength(5, 5) should be equal to true', () => {
+      const areSameLength = funcs.areSameLength;
+      assert.equals(areSameLength(5, 5), true);
     });
   });
 
